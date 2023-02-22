@@ -36,7 +36,7 @@ app.post("/", function (req, res) {
     auth: "ahmed:171f2dcce349dc05b6417ae647b6784d-us21",
   };
   const request = https.request(url, options, function (response) {
-    if (response.statusCode == 200) {
+    if (response.status == 200) {
       res.sendFile(__dirname + "/success.html");
     } else {
       res.sendFile(__dirname + "/failure.html");
